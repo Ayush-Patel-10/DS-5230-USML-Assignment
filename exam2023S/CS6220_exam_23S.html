@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>FINAL EXAM</title>
+    <meta name="CREATED" content="20050506;19503200">
+    <meta name="CHANGED" content="20060531;23041200">
+  </head>
+  <body>
+    <h1><font face="Luxi Sans">CS6220 Final Exam Spring 2023</font></h1> <h3>April 26th 2023</h3>
+    
+      </font></h1>
+    <!-- <p>Make sure you check the <a href="../../html/schedulen.html"><font
+          face="Luxi Sans">syllabus</font></a> for the due date. Please
+      use the notations adopted in class, even if the problem is stated
+      in the book using a different notation.</p>
+    <p>We are not looking for very long answers (if you find yourself
+      writing more than one or two pages of typed text per problem, you
+      are probably on the wrong track). Try to be concise; also keep in
+      mind that good ideas and explanations matter more than exact
+      details.</p>
+    <p>Submit all code files Dropbox (create folder HW1 or similar
+      name). Results can be pdf or txt files, including plots/tabels if
+      any.<br>
+    </p>
+    <p>"Paper" exercises: submit using Dropbox as pdf, either typed or
+      scanned handwritten.<br>
+    </p> -->
+    <hr>
+    <!-- <h3 style="font-weight: normal;">DATASET 1<span style="font-weight:
+        bold;">:</span><small> Housing data, (training, testing, description). The last
+        column are the labels</small>. <br>
+    </h3> -->
+    <!-- <p>DATATSET 2<span style="font-weight: bold;">: Spambase : spam emails</p> -->
+    <!-- <p>DATATSET <span style="font-weight: bold;">: <a href=https://archive.ics.uci.edu/ml/datasets/spambase> SpamBase</a>: emails (54-feature vectors) classified as spam/nospam</p>
+    <p>DATATSET <span style="font-weight: bold;">: 20 NewsGroups : news articles </p>
+    <p>DATATSET <span style="font-weight: bold;">: MNIST : 28x28 digit B/W images </p>
+    <p>DATATSET <span style="font-weight: bold;">: FASHION : 28x28 B/W  images </p>
+	    https://en.wikipedia.org/wiki/MNIST_database <br>
+	    http://yann.lecun.com/exdb/mnist/ <br>
+	    https://www.kaggle.com/zalando-research/fashionmnist <br>
+
+   -->  
+     For each problem submit to Gradescope your code, and also a readme.txt file (max one page) describing in bullets: the ideas you had, why they make sense, why they worked or not, the results, and implementation details such as setting parameters etc.
+   
+   	
+<!--   	<br><br>-->
+<!--   	Exam time: 7 hours once you start. Please make sure you have all files in Dropbox before your time expires (do not make changes after that). -->
+<!--   	<br><br>-->
+<!--	piazza: piazza.com/northeastern/spring2021/cs6220final-->
+<!--	<br>-->
+<!--	piazza code: 1AB2CFIN-->
+	
+   <br><br>    <br><br> 
+   
+   
+    
+    
+    <!-- <h3>PROBLEM 1 </h3>
+    <p>Using each dataset, parse it into a feature matrix, and normalize the features</p> -->
+    
+    <h3>PROBLEM 1 [50 points] kNN classifier on noisy images</h3>
+    <!-- <math display="block">\text{geometric series:}\quad \sum_{i=0}^\infty 2^{-i}=2 </math> -->
+	<p>DATATSET <a href=trainPB1.txt>  train_images</a> and <a href=testPB1.txt>  test_images</a>. Each row is an image: first column is the label (digit), then the other 784 columns are pixel values. 
+	<br><br>
+	
+	<span style="font-weight:bold"></span> Task: run a KNN classification algorithm with NN=20 neighbors. You will have to decide the distance function, and other details. Test on the test set and compute accuracy. <br><br>
+	These images have noise in them, so clustering with certain distances might not work; to achieve a better result, you need to work on the features first, then rerun your classifier and report accuracy. 
+<!--	<br><br>-->
+<!--	Labels are not to be used during the algorithm/clustering/feature extraction, but only for evaluation: evaluate using purity both ways: purity(labels,clusters) and purity(clusters, labels). For full credit you need the F_avg (harmonic mean 2ab/(a+b) ) of these two metrics >= 0.30. For reference: Purity(IDs1, IDs2) calculates the average over IDs1, how dominant is the majority ID2 within the ID1 observations/datapoints. The purity code can be downloaded online or self implemented. -->
+<!--	<br><br>-->
+	
+<!--	<span style="font-weight:bold">Part B.</span> Same task, but you can reveal and use for trianing up to 500 image labels in the validation set. You can use any algorithm to improve the two purity scores.  You dont have to use all 500 labels at once (for example one might reveal 100 labels, run an algorithm, reveal another 100 labels, run again, etc.)-->
+		
+<!-- ============================================================================================   	
+	============================================================================================ 
+-->
+<br><br><br><br>
+
+
+  <h3>PROBLEM 2 [50 points] Quiz Difficulties Mixture<br>     </h3>
+
+Professor Virgil teaches intro-math CS1800 to 1000 students. For the quiz there are three versions A,B,C with difficulties p_A, p_B, p_C (probability that any student can solve it, students are equally good at math). Grading is binary 1/0 for each student.  <br>
+
+Virgil splits the students into 50 sessions of K=20 students each; each session gets a quiz with fixed non-uniform selection probabilities q_A, q_B, q_C, which sum to 1. Attached is the <a href = "studentgrades_pb2.txt"> gradesheet </a>, each row corresponds to a session with 20 binary grades for students in that session.<br><br>
+
+Compute the probabilities to assign each problem to session (3 "q" probabilities), and also the chance of students at large solving each problem (3 "p" probabilities). <br><br>
+HINT: for each session, since students are independent of each other, what matters is the number of students x solving the problem out of the batch size K. If chance of solving session quiz is p_ for any student, then probability of observing x correct solutions is binomial(x|p_, K). Here is a technical brief <a href="EM_coin_flipping.pdf"> note </a>.
+	
+<br><br>
+
+<!-- ============================================================================================   	============================================================================================ 
+-->
+
+<!-- ============================================================================================   	============================================================================================ 
+-->
+
+	
+    
+    
+  </body>
+</html>
